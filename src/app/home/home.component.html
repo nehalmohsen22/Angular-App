@@ -1,0 +1,13 @@
+
+<section class="section is-medium">
+    <div *ngIf="isvalid">
+        Home
+      </div>
+      <ul class="list-group" >
+          <li class="list-group-item" *ngFor="let c of peopleByCountry" > <span style="color: coral;"> {{c.country}}</span>
+            <ul > 
+              <li *ngFor="let p of c.people" style="color: darkgray;">{{p.name}}</li>
+            </ul>
+          </li>
+      </ul>
+  </section>
