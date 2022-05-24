@@ -10,6 +10,7 @@ import { AsideComponent } from './aside/aside.component';
 import { HomeComponent } from './home/home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NavBarComponent,
     FooterComponent,
     AsideComponent,
-    HomeComponent
+    HomeComponent,
+    ToDoListComponent
   ],
   imports: [
     BrowserModule,

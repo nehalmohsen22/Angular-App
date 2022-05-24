@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="md-form">
+            <input mdbInput type="text" id="form1" class="form-control" #todo>
+            <label for="form1" class="" >Ex: react.js</label>
+            <button type="submit" mdbBtn color="primary" (click)="add(todo)">Add</button>
+          </div>
+      <div class="col-md-12">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" #todoFilter>
+        <button type="submit" mdbBtn color="primary"(click)="like(todoFilter.value)"> Search</button>
+      </div>
+      <div class="col-md-12">
+        <ul class="list-group">
+          <li *ngFor="let todo of filteredTodos" class="list-group-item"> 
+            {{ todo.name }}
+            <div class="float-right">            
+                <button type="submit" mdbBtn color="danger" (click)="delete(todo.id)" >  Complete </button>
+            </div>
+        </ul>
+      </div>
+    </div>
+  </div>
