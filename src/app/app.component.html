@@ -1,18 +1,25 @@
-
 <div class="container">
-
-
-    <div class="header-container">
-        <app-nav-bar></app-nav-bar>
+  <div class="header-container">
+    <app-nav-bar></app-nav-bar>
     <app-header></app-header>
-    </div>
-    
-    <div class="columns">
-        <div class="column"><app-home></app-home></div>
-      <div class="column">
-      <app-aside></app-aside></div>
+  </div>
 
+  <!-- <div class="columns">
+    <div class="column"><app-home></app-home></div>
+    <div class="column">
+      <app-aside></app-aside>
     </div>
-    
-    <app-footer></app-footer>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <app-aside></app-aside>
+      <br />
     </div>
+    <hr />
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

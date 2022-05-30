@@ -1,0 +1,54 @@
+<form
+  #myloginform="ngForm"
+  (ngSubmit)="login(myloginform.value)"
+  class="text-center border border-light p-5"
+>
+  <p class="h4 mb-4">Sign in</p>
+
+  <label for="username">Username</label>
+  <input
+    type="text"
+    class="form-control mb-4"
+    id="username"
+    name="username"
+    #username="ngModel"
+    [(ngModel)]="user.username"
+    required
+  />
+  <div
+    [hidden]="username.valid || username.pristine"
+    class="alert alert-danger"
+  >
+    Username is required
+  </div>
+  <label for="password">Password</label>
+  <input
+    type="password"
+    class="form-control mb-4"
+    id="password"
+    name="password"
+    #password="ngModel"
+    [(ngModel)]="user.password"
+    required
+  />
+  <div
+    [hidden]="password.valid || password.pristine"
+    class="alert alert-danger"
+  >
+    Password is required
+  </div>
+  <div>
+    <mdb-checkbox [default]="true">Remember me</mdb-checkbox>
+  </div>
+  <button
+    type="submit"
+    mdbBtn
+    color="info"
+    block="true"
+    class="my-4"
+    type="submit"
+    [disabled]="myloginform.invalid"
+  >
+    Login
+  </button>
+</form>

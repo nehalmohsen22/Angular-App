@@ -1,0 +1,19 @@
+<h1 class="text-center">Products</h1>
+
+<hr />
+<a [routerLink]="['/add-product']" mdbBtn color="dark" mdbWavesEffect
+  >Add Product</a
+>
+
+<div class="container">
+  <div class="row">
+    <app-product-card
+      *ngFor="let prod of prodList"
+      [singleProd]="prod"
+      (prodSelected)="selectProd($event)"
+      class="col-md-4"
+      [showDetails]="true"
+    >
+    </app-product-card>
+  </div>
+</div>
